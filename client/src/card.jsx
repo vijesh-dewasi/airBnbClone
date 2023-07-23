@@ -26,6 +26,19 @@ const Card = (props) => {
     return (<>
         <div className='lap1:w-[calc(25%-1.25rem)] tab1:w-[calc(33%-1.25rem)] mob1:w-[calc(50%-1.25rem)] mob3:w-[calc(100%-1.25rem)]' >
             <div className=' w-full relative overflow-hidden'>
+                  
+            <button ref={imagePrevRef} className={` z-30 bg-white absolute top-1/2 -translate-y-1/2 left-0 flex items-center justify-center h-6 w-6 border-2 border-gray-200 rounded-full hover:drop-shadow-lg hover:scale-110 ${start ? "invisible" : ""}`}>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3.5" stroke="currentColor" className="w-3 h-3 text-black">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </button>
+
+                <button ref={imageNextRef} className={` z-30 bg-white absolute top-1/2  -translate-y-1/2 right-0 flex items-center justify-center h-6 w-6 border-2 border-gray-200 rounded-full hover:drop-shadow-lg hover:scale-110 ${end ? "invisible" : ""}`}>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3.5" stroke="currentColor" className="w-3 h-3 text-black">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>  
+
                 <Swiper
                     style={{
                         "--swiper-pagination-color": "#FFF",
@@ -76,17 +89,7 @@ const Card = (props) => {
                     </SwiperSlide>
 
                 </Swiper>
-                <button ref={imagePrevRef} className={` z-30 bg-white absolute top-1/2 -translate-y-1/2 left-0 flex items-center justify-center h-6 w-6 border-2 border-gray-200 rounded-full hover:drop-shadow-lg hover:scale-110 ${start ? "invisible" : ""}`}>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3.5" stroke="currentColor" className="w-3 h-3 text-black">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                    </svg>
-                </button>
-
-                <button ref={imageNextRef} className={` z-30 bg-white absolute top-1/2  -translate-y-1/2 right-0 flex items-center justify-center h-6 w-6 border-2 border-gray-200 rounded-full hover:drop-shadow-lg hover:scale-110 ${end ? "invisible" : ""}`}>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3.5" stroke="currentColor" className="w-3 h-3 text-black">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                </button>
+                
                 <div onClick={()=>{setliked(!liked)}} className={`z-30 absolute right-4 top-4 ${liked?"opacity-100":"opacity-50"}`}>
                     
                     <svg width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet" fill="#f5f5f5" stroke="#f5f5f5" strokeWidth="1.476"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill={`${liked?"#ff008a":"#bfbaba"}`} d="M35.885 11.833c0-5.45-4.418-9.868-9.867-9.868c-3.308 0-6.227 1.633-8.018 4.129c-1.791-2.496-4.71-4.129-8.017-4.129c-5.45 0-9.868 4.417-9.868 9.868c0 .772.098 1.52.266 2.241C1.751 22.587 11.216 31.568 18 34.034c6.783-2.466 16.249-11.447 17.617-19.959c.17-.721.268-1.469.268-2.242z"></path></g></svg>
