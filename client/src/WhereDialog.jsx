@@ -10,37 +10,37 @@ const WhereDialog = () => {
              <div className='mx600:min-w-c10 rounded-lg border border-gray-400 overflow-hidden'>
             <img src="/assets/asset 0.jpeg" alt="" />
              </div>
-            <p className="mx600:text-sm"> im flexbie</p>
+            <p className="mx600:text-sm"> Im flexbie</p>
         </div> 
         <div className='flex flex-col gap-2 mob4:w-24 mx600:w-c10 rounded-lg '>
              <div className='mx600:min-w-c10 rounded-lg border border-gray-400 overflow-hidden'>
-            <img src="/assets/asset 0.jpeg" alt="" />
+            <img src="/assets/asset 1.webp" alt="" />
              </div>
-            <p className="mx600:text-sm"> im flexbie</p>
+            <p className="mx600:text-sm"> Europe</p>
         </div> 
         <div className='flex flex-col gap-2 mob4:w-24 mx600:w-c10 rounded-lg '>
              <div className='mx600:min-w-c10 rounded-lg border border-gray-400 overflow-hidden'>
-            <img src="/assets/asset 0.jpeg" alt="" />
+            <img src="/assets/asset 2.webp" alt="" />
              </div>
-            <p className="mx600:text-sm"> im flexbie</p>
+            <p className="mx600:text-sm">united kingdom</p>
         </div> 
         <div className='flex flex-col gap-2 mob4:w-24 mx600:w-c10 rounded-lg '>
              <div className='mx600:min-w-c10 rounded-lg border border-gray-400 overflow-hidden'>
-            <img src="/assets/asset 0.jpeg" alt="" />
+            <img src="/assets/asset 3.webp" alt="" />
              </div>
-            <p className="mx600:text-sm"> im flexbie</p>
+            <p className="mx600:text-sm"> south east asia</p>
         </div> 
         <div className='flex flex-col gap-2 mob4:w-24 mx600:w-c10 rounded-lg '>
              <div className='mx600:min-w-c10 rounded-lg border border-gray-400 overflow-hidden'>
-            <img src="/assets/asset 0.jpeg" alt="" />
+            <img src="/assets/asset 4.webp" alt="" />
              </div>
-            <p className="mx600:text-sm"> im flexbie</p>
+            <p className="mx600:text-sm">Italy</p>
         </div> 
         <div className='flex flex-col gap-2 mob4:w-24 mx600:w-c10 rounded-lg '>
              <div className='mx600:min-w-c10 rounded-lg border border-gray-400 overflow-hidden'>
-            <img src="/assets/asset 0.jpeg" alt="" />
+            <img src="/assets/asset 5.webp" alt="" />
              </div>
-            <p className="mx600:text-sm"> im flexbie</p>
+            <p className="mx600:text-sm">united states</p>
         </div> 
      </div>
      </div>

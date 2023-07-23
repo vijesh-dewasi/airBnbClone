@@ -13,10 +13,9 @@ const Card = (props) => {
         month,
         cost,
         isnew,
-        favourite,
         imgsrc
     } = props.info;
-
+    const from = imgsrc.from
     const [end, setend] = useState(0);
     const [start, setStart] = useState(1);
 
@@ -52,22 +51,27 @@ const Card = (props) => {
                 >
                     <SwiperSlide >
                         <div className='w-full h-60 rounded-lg overflow-hidden'>
-                            <img className=' w-full h-full object-cover' src="/assets/asset 67.webp" alt="" />
+                            <img className=' w-full h-full object-cover' src={`/assets/card (${from+0}).webp`} alt="" />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide >
                         <div className='w-full h-60 rounded-lg overflow-hidden'>
-                            <img className=' w-full h-full object-cover' src="/assets/asset 68.webp" alt="" />
+                            <img className=' w-full h-full object-cover' src={`/assets/card (${from+1}).webp`} alt="" />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide >
                         <div className='w-full h-60 rounded-lg overflow-hidden'>
-                            <img className=' w-full h-full object-cover' src="/assets/asset 69.webp" alt="" />
+                            <img className=' w-full h-full object-cover' src={`/assets/card (${from+2}).webp`} alt="" />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide >
                         <div className='w-full h-60 rounded-lg overflow-hidden'>
-                            <img className=' w-full h-full object-cover' src="/assets/asset 70.webp" alt="" />
+                            <img className=' w-full h-full object-cover' src={`/assets/card (${from+3}).webp`} alt="" />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide >
+                        <div className='w-full h-60 rounded-lg overflow-hidden'>
+                            <img className=' w-full h-full object-cover' src={`/assets/card (${from+4}).webp`} alt="" />
                         </div>
                     </SwiperSlide>
 

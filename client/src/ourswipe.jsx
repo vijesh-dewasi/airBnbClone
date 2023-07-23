@@ -6,7 +6,7 @@ import Aslide from "./aslide"
 export default function ourswipe() {
   const [end, setend] = useState(0);
   const [start, setStart] = useState(1);
-  const [slideno,setslideno]=useState(0)
+  const [slideno,setslideno]=useState(1)
   const navigationPrevRef = useRef(null)
   const navigationNextRef = useRef(null)
    const [slides_per_view,set_slides_per_view] = useState(10);
