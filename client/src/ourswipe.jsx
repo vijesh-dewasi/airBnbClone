@@ -13,7 +13,7 @@ export default function ourswipe() {
   const slide_no_prop = slideno;
   const setslideno_prop= setslideno;
    const handleResize = () => {
-    if (window.innerWidth < 500) {
+    if (window.innerWidth < 500){
   set_slides_per_view(3)
     } else if(window.innerWidth < 700){
   set_slides_per_view(5)   
@@ -29,6 +29,20 @@ export default function ourswipe() {
   useEffect(() => {
     window.addEventListener("resize", handleResize)
   })
+
+  useEffect(() => {
+    if (window.innerWidth < 500){
+      set_slides_per_view(3)
+        } else if(window.innerWidth < 700){
+      set_slides_per_view(5)   
+        }
+        else if(window.innerWidth < 900){
+      set_slides_per_view(7)   
+        }
+        else{
+      set_slides_per_view(10)   
+        }
+  },[])
    
   return (
     <div className="max-w-80p mx800:max-w-70p  px-5 relative">

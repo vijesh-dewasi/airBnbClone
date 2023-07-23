@@ -36,6 +36,8 @@ export default {
      screens: {
       'mx500': {'max':'500px'},
       'mx600': {'max':'600px'},
+      'mx700': {'max':'700px'},
+      'mx730': {'max':'730px'},
       'mx800': {'max':'800px'},
       'mx900': {'max':'900px'},
       'mx1200':{'max':'1200px'},
@@ -44,6 +46,7 @@ export default {
       'mob2': '500px',
       'mob4':'600px',
       'mob1': '800px',
+      'tab2':'700px',
       'tab1': '900px',
       'lap1': '1380px',
     }

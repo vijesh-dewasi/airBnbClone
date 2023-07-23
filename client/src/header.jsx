@@ -8,6 +8,7 @@ const Header = function (props) {
     const searchSetter = function(i){
         setSearch(i);
        } 
+       const [which_tab,setTab]=useState(-1);
     return (
         <div>
             <header className='pt-6 bg-white z-50 p-4 border-b flex flex-col gap-y-4  justify-between fixed top-0 min-h-10c min-w-full max-w-full'>
@@ -22,22 +23,32 @@ const Header = function (props) {
                         <p> experiences</p>
                         <p>online experiences</p>
                     </div>
-                    : <div onClick={() => {
-                        // if (window.innerWidth < 800) {
-                        //     return;
-                        // }
+                    : <div className='absolute left-1/2 -translate-x-1/2 hover:shadow-gray-300 py-2 px-4 gap-2 flex border border-gray-300 rounded-full shadow-md shadow-gray-200'>
+                        <div  onClick={() => {
+                       
+                        setTab(1)
                         setSearch(!search)
-                    }} className='absolute left-1/2 -translate-x-1/2 hover:shadow-gray-300 py-2 px-4 gap-2 flex border border-gray-300 rounded-full shadow-md shadow-gray-200'>
-                        <div className='mx600:hidden text-sm font-semibold'>Any where</div>
-                        <div className=' mx600:hidden border-l border-gray-200'></div>
-                        <div className='mx600:hidden text-sm font-semibold'>Any week</div>
+                    }}className='mx730:hidden text-sm font-semibold'>Any where</div>
+                        <div  onClick={() => {
+                       
+                        setTab(2)
+                        setSearch(!search)
+                    }} className=' mx730:hidden border-l border-gray-200'></div>
+                        <div  onClick={() => {
+                       
+                        setTab(3)
+                        setSearch(!search)
+                    }} className='mx730:hidden text-sm font-semibold'>Any week</div>
                         <div className='mx600:hidden border border-l border-gray-200'></div>
 
-                        <div className=' mx600:hidden text-sm'>Add guest</div>
+                        <div 
+                         onClick={() => {
+                       
+                        setTab(4)
+                        setSearch(!search)
+                    }} className=' mx730:hidden text-sm'>Add guest</div>
                         <button onClick={() => {
-                        // if (window.innerWidth < 800) {
-                        //     return;
-                        // }
+                        setTab(4)
                         setSearch(!search)
                     }} className=' bg-primary p-1 border-gray-300 rounded-full'>
                             <svg className='w-4 h-4' fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search"><g data-name="Layer 2"><path d="m20.71 19.29-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 11a6 6 0 1 1 6 6 6 6 0 0 1-6-6z" data-name="search"></path></g></svg>
@@ -73,7 +84,7 @@ const Header = function (props) {
                     </Link>
                 </div>
                 </div>
-                {search ? <SearchTabs setter = {searchSetter} ></SearchTabs> : ""}
+                {search ? <SearchTabs to_select={which_tab} setter = {searchSetter} ></SearchTabs> : ""}
             </header>
         </div>
     )
